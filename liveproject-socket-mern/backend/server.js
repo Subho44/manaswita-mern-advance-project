@@ -6,6 +6,8 @@ const {Server} = require("socket.io");
 const Post = require("./models/Post");
 const postroutes = require("./routes/postRoutes");
 const Message = require("./models/Message");
+const meetingRoutes = require("./routes/meetingRoutes");
+
 
 require("dotenv").config();
 const app = express();
@@ -110,6 +112,7 @@ io.on("connection", (socket)=>{
 });
 
 app.use("/api/posts", postroutes);
+app.use("/api/meetings", meetingRoutes);
 
 app.get("/",(req,res)=>{
     res.send("api is working");
