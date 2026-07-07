@@ -3,6 +3,7 @@ import axios from "axios";
 import { io } from "socket.io-client";
 import "./App.css";
 import Chatbox from "./components/Chatbox";
+import Metting from "./components/Metting";
 
 const socket = io("http://localhost:5500");
 
@@ -144,6 +145,9 @@ function App() {
       </div>
       <div>
         <Chatbox/>
+      </div>
+      <div>
+        <Metting/>
       </div>
     </div>
     
