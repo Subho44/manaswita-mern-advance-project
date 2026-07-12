@@ -4,6 +4,7 @@ import { io } from "socket.io-client";
 import "./App.css";
 import Chatbox from "./components/Chatbox";
 import Metting from "./components/Metting";
+import Locationtrack from "./components/Locationtrack";
 
 const socket = io("http://localhost:5500");
 
@@ -148,6 +149,9 @@ function App() {
       </div>
       <div>
         <Metting/>
+      </div>
+      <div>
+        <Locationtrack/>
       </div>
     </div>
     
